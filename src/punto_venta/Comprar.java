@@ -3,12 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package punto_venta;
+import com.clases.*;
 
 /**
  *
  * @author edwin
  */
 public class Comprar extends javax.swing.JFrame {
+    
+    public String name;
 
     /**
      * Creates new form Comprar
@@ -36,6 +39,20 @@ public class Comprar extends javax.swing.JFrame {
         btnCanasta = new javax.swing.JButton();
         btnComprar = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -44,7 +61,40 @@ public class Comprar extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        pro_1 = new javax.swing.JLabel();
+        pro_2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        pro_3 = new javax.swing.JLabel();
+        pro_4 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        pro_5 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        pro_6 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        pro_7 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        pro_8 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        pro_9 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -124,18 +174,116 @@ public class Comprar extends javax.swing.JFrame {
                 .addGap(88, 88, 88))
         );
 
+        jLabel33.setFont(new java.awt.Font("Roboto", 3, 14)); // NOI18N
+        jLabel33.setText("Productos en caja:");
+
+        jLabel34.setText("Manzana");
+
+        jLabel35.setText("Vallas");
+
+        jLabel36.setText("Peras");
+
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/mas.png"))); // NOI18N
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/signo-menos-de-una-linea-en-posicion-horizontal.png"))); // NOI18N
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/mas.png"))); // NOI18N
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/signo-menos-de-una-linea-en-posicion-horizontal.png"))); // NOI18N
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/mas.png"))); // NOI18N
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/signo-menos-de-una-linea-en-posicion-horizontal.png"))); // NOI18N
+
+        jLabel43.setText("3");
+
+        jLabel44.setText("9");
+
+        jLabel45.setText("13");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel37)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel38))
+                            .addComponent(jLabel34))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel40))
+                            .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(69, 69, 69)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel41)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel42)))
+                        .addGap(37, 37, 37))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel33)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel43)
+                        .addGap(113, 113, 113)
+                        .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel45)
+                        .addGap(55, 55, 55))))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel35)
+                    .addComponent(jLabel36))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel40)
+                    .addComponent(jLabel39)
+                    .addComponent(jLabel42)
+                    .addComponent(jLabel41))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43)
+                    .addComponent(jLabel44)
+                    .addComponent(jLabel45))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(28, 28, 28)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 600));
@@ -196,15 +344,123 @@ public class Comprar extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/arandanos.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 180, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
-        jLabel8.setText("Manzana");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, -1, -1));
+        pro_1.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_1.setText("Pera");
+        jPanel1.add(pro_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 150, -1, -1));
+
+        pro_2.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_2.setText("Manzana");
+        jPanel1.add(pro_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/pera.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 180, -1, -1));
+
+        pro_3.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_3.setText("Vallas");
+        jPanel1.add(pro_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 150, -1, -1));
+
+        pro_4.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_4.setText("Manzana");
+        jPanel1.add(pro_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/manzana.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, -1, -1));
+
+        pro_5.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_5.setText("Vallas");
+        jPanel1.add(pro_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 290, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/arandanos.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, -1, -1));
+
+        pro_6.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_6.setText("Pera");
+        jPanel1.add(pro_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 290, -1, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/pera.png"))); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 320, -1, -1));
+
+        pro_7.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_7.setText("Manzana");
+        jPanel1.add(pro_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/manzana.png"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, -1, -1));
+
+        pro_8.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_8.setText("Vallas");
+        jPanel1.add(pro_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, -1, -1));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/arandanos.png"))); // NOI18N
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 480, -1, -1));
+
+        pro_9.setFont(new java.awt.Font("Roboto", 3, 18)); // NOI18N
+        pro_9.setText("Pera");
+        jPanel1.add(pro_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, -1, -1));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/pera.png"))); // NOI18N
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 480, -1, -1));
+
+        jLabel15.setText("$ 25.000");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, -1, -1));
+
+        jLabel16.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 100, -1));
+
+        jLabel17.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 100, -1));
+
+        jLabel18.setText("$ 25.000");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, -1, -1));
+
+        jLabel19.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 250, 100, -1));
+
+        jLabel20.setText("$ 25.000");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, -1, -1));
+
+        jLabel21.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 100, -1));
+
+        jLabel22.setText("$ 25.000");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, -1, -1));
+
+        jLabel23.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 100, -1));
+
+        jLabel24.setText("$ 25.000");
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, -1));
+
+        jLabel25.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 400, 100, -1));
+
+        jLabel26.setText("$ 25.000");
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 410, -1, -1));
+
+        jLabel27.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 100, -1));
+
+        jLabel28.setText("$ 25.000");
+        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 560, -1, -1));
+
+        jLabel29.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 100, -1));
+
+        jLabel30.setText("$ 25.000");
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 560, -1, -1));
+
+        jLabel31.setText("<html>15 unidades disponibles<html>");
+        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 550, 100, -1));
+
+        jLabel32.setText("$ 25.000");
+        jPanel1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 560, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         Punto_de_venta home = new Punto_de_venta();
         home.setVisible(true);
@@ -268,18 +524,75 @@ public class Comprar extends javax.swing.JFrame {
     private javax.swing.JButton btnComprar;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JLabel pro_1;
+    private javax.swing.JLabel pro_2;
+    private javax.swing.JLabel pro_3;
+    private javax.swing.JLabel pro_4;
+    private javax.swing.JLabel pro_5;
+    private javax.swing.JLabel pro_6;
+    private javax.swing.JLabel pro_7;
+    private javax.swing.JLabel pro_8;
+    private javax.swing.JLabel pro_9;
     // End of variables declaration//GEN-END:variables
+
+    
+        public boolean Mostrar_productos (){
+        
+        this.pro_1.setText(Productos.class.getName());
+        return true;
+        
+    }
+    
 }
+

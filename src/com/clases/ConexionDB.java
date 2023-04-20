@@ -17,8 +17,7 @@ public class ConexionDB {
         Connection con = null;
         try{
         //Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection(url, user, password);
-        
+        con = DriverManager.getConnection(url, user, password); 
     }   catch (Exception ex)
         {
             Logger.getLogger(ConexionDB.class.getName()).log(Level.SEVERE, null, ex);
