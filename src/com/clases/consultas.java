@@ -16,6 +16,7 @@ import punto_venta.Comprar;
 
 public class consultas extends ConexionDB {
 
+        
     public boolean registrar(com usr) {
 
         PreparedStatement ps = null;
@@ -83,7 +84,7 @@ public class consultas extends ConexionDB {
         //ConexionDB condb = new ConexionDB();
         Connection con = getConexion();
         //System.out.println("Conexion" + con);
-        String sql = "SELECT count(id) tipo_usuario WHERE user = ?";
+        String sql = "SELECT count(id) FROM tipo_usuario WHERE user = ?";
 
         try
         {
@@ -109,7 +110,7 @@ public class consultas extends ConexionDB {
         ResultSet rs = null;
         PreparedStatement ps = null;
         Connection con = getConexion();
-        String sql = "INSERT INTO productos (codigo, nombre, precio, stock, total) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO productos (codigo, nombre, precio, stock) VALUES (?,?,?,?)";
 
         try
         {
@@ -118,11 +119,10 @@ public class consultas extends ConexionDB {
             ps.setString(2, pro.getNombre());
             ps.setDouble(3, pro.getPrecio());
             ps.setInt(4, pro.getStock());
-            ps.setDouble(5, pro.getTotal());
             ps.execute();
             return true;
 
-        } catch (Exception e)
+        } catch (SQLException e)
         {
             Logger.getLogger(consultas.class.getName()).log(Level.SEVERE, null, e);
             return false;
@@ -130,10 +130,11 @@ public class consultas extends ConexionDB {
     }
 
     public List ListarProductos() {
+        List<Productos> Listapro = new ArrayList<>();
         ResultSet rs = null;
         PreparedStatement ps = null;
         Connection con = getConexion();
-        List<Productos> Listapro = new ArrayList<Productos>();
+        System.out.println("Coneccion" + con);
         String sql = "SELECT * FROM productos";
         try
         {
@@ -148,12 +149,40 @@ public class consultas extends ConexionDB {
                 pro.setStock(rs.getInt("stock"));
                 Listapro.add(pro);
             }
-        } catch (Exception e)
+        } catch (SQLException e)
         {
             Logger.getLogger(consultas.class.getName()).log(Level.SEVERE, null, e);
             return Listapro;
         }
         return Listapro;
     }
+    
+    public boolean EliminarProducto(int id) {
+        Connection con = null;
+        PreparedStatement ps = null;
 
+        try {
+            con = getConexion();
+            String sql = "DELETE FROM productos WHERE codigo = ?";
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            int filasEliminadas = ps.executeUpdate();
+            return (filasEliminadas > 0);
+        } catch (SQLException e) {
+            Logger.getLogger(consultas.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                Logger.getLogger(consultas.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+        return false;
+    }
+    
 }

@@ -5,8 +5,10 @@
 package punto_venta;
 import com.clases.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -15,10 +17,26 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Admin extends javax.swing.JFrame {
     
-    DefaultTableModel modelo;
+    DefaultTableModel modelo = new DefaultTableModel();
     Productos pro = new Productos();
     consultas con = new consultas();
 
+    private void LimpiarProductos(){
+        
+        txtCodigo.setText("");
+        txtNombre.setText("");
+        txtPrecio.setText("");
+        txtStock.setText("");
+    
+    }
+
+    private void LimpiarTabla(){
+        
+        modelo.setRowCount(0);
+        table.repaint();
+        
+    }
+    
     /**
      * Creates new form Admin
      */
@@ -201,8 +219,18 @@ public class Admin extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/paquete-o-empaquetar.png"))); // NOI18N
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/boton-actualizar.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/eliminar.png"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/images/agregar-archivo.png"))); // NOI18N
 
@@ -346,6 +374,11 @@ public class Admin extends javax.swing.JFrame {
                 "CODIGO", "NOMBRE", "PRECIO", "STOCK"
             }
         ));
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(table);
         if (table.getColumnModel().getColumnCount() > 0) {
             table.getColumnModel().getColumn(0).setPreferredWidth(50);
@@ -360,6 +393,30 @@ public class Admin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    public void ListarProductos(){
+       
+        List<Productos> Listapro = con.ListarProductos();
+        //System.out.println("productos: " + Listapro.toString());
+        Object[] pro = new Object[4];
+        /*
+        modelo.addColumn("Codigo");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Precio");
+        modelo.addColumn("Stock");
+        */
+        modelo = (DefaultTableModel) table.getModel();
+        for(int i = 0; i < Listapro.size(); i++){
+            System.out.println("productos: " + Listapro);
+            pro[0] = Listapro.get(i).getCodigo();
+            pro[1] = Listapro.get(i).getNombre();
+            pro[2] = Listapro.get(i).getPrecio();
+            pro[3] = Listapro.get(i).getStock();
+            modelo.addRow(pro);
+            //System.out.println("modelo" + modelo);
+        }
+        table.setModel(modelo);
+
+    }
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
@@ -410,23 +467,40 @@ public class Admin extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    public void ListarProductos(){
-       
-        List<Productos> Listarpro = con.ListarProductos();
-        modelo = (DefaultTableModel) table.getModel();
-        Object[] productos = new Object[6];
-        for(int i = 0; i < Listarpro.size(); i++){
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+        
+        int fila = table.rowAtPoint(evt.getPoint());
+        txtCodigo.setText(table.getValueAt(fila, 0).toString());
+        txtNombre.setText(table.getValueAt(fila, 1).toString());
+        txtPrecio.setText(table.getValueAt(fila, 2).toString());
+        txtStock.setText(table.getValueAt(fila, 3).toString());
+        
+    }//GEN-LAST:event_tableMouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        if(!"".equals(txtCodigo.getText())){
             
-            productos[0] = Listarpro.get(i).getCodigo();
-            productos[1] = Listarpro.get(i).getNombre();
-            productos[2] = Listarpro.get(i).getPrecio();
-            productos[3] = Listarpro.get(i).getStock();
-            modelo.addRow(productos);
+            int pregunta = JOptionPane.showConfirmDialog(null, "¿Estas seguro de eliminar el producto?");
+            if(pregunta == 0){
+                
+                int id = Integer.parseInt(txtCodigo.getText());
+                con.EliminarProducto(id);
+                LimpiarTabla();
+                LimpiarProductos();
+                ListarProductos();
+                JOptionPane.showMessageDialog(null, "¡Producto eliminado exitosamente!");
+                
+            }
             
         }
-        table.setModel(modelo);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    }
     /**
      * @param args the command line arguments
      */

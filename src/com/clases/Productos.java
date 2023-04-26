@@ -14,19 +14,18 @@ public class Productos {
     private String nombre;
     private double precio;
     private int stock;
-    private double total;
+    
+    public Productos() {
+        
+    }
 
     public Productos(int codigo, String nombre, double precio, int stock, double total) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
-        this.total = total;
     }
 
-    public Productos() {
-        
-    }
 
     public int getCodigo() {
         return codigo;
@@ -60,13 +59,10 @@ public class Productos {
         this.stock = stock;
     }
 
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
+    /*@Override
+    public String toString() {
+        return "Productos{" + "codigo=" + codigo + ", nombre=" + nombre + ", precio=" + precio + ", stock=" + stock + '}';
+    }*/
     
     
     

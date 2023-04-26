@@ -227,7 +227,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Hoy es 20  de abril del 2023"/>
+                <Property name="text" type="java.lang.String" value="Hoy es 26  de abril del 2023"/>
               </Properties>
             </Component>
           </SubComponents>

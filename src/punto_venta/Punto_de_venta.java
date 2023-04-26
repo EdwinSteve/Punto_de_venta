@@ -169,7 +169,7 @@ public class Punto_de_venta extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Hoy es 20  de abril del 2023");
+        jLabel1.setText("Hoy es 26  de abril del 2023");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -373,6 +373,7 @@ public class Punto_de_venta extends javax.swing.JFrame {
                 this.dispose();
                 
                 Admin Administrador = new Admin();
+                Administrador.ListarProductos();
                 Administrador.setVisible(true);
 
             } else
